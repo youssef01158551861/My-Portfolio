@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.head {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 150, 136, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    color: #B2DFDB;
+    transform: scale(1.1);
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #B2DFDB;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #B2DFDB;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.main {
+    margin-top:30px;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 3rem;
+    color: #009688;
+}
+
+.main h1 span {
+    color: #333;
+}
+
+.main h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.main-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #009688;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.main-btn:hover {
+    background-color: #00bfa5;
+    transform: translateY(-3px);
+}
+
+/* Social Icons */
+.social-icons a {
+    margin: 0 10px;
+    color: #009688;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00bfa5;
+}
+
+/* Skills Section */
+.skills {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f0f4f8;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #009688;
+}
+
+.skills .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skills .card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.skills .card h3 {
+    color: #009688;
+    margin-bottom: 15px;
+}
+
+.skills .card p {
+    color: #333;
+}
+
+/* Services Section */
+.cards#services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cards#services .card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards#services .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.cards#services .card .icon {
+    color: #009688;
+    margin-bottom: 15px;
+}
+
+/* Projects Section */
+.projects .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-category {
+    font-size: 0.9rem;
+    color: #009688;
+    margin-bottom: 5px;
+}
+
+.project-title span {
+    display: block;
+    font-weight: 600;
+    color: #333;
+}
+
+.more-details {
+    display: inline-block;
+    margin-top: 5px;
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.more-details:hover {
+    color: #00bfa5;
+}
+
+/* Contact Section */
+.cards.contact .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cards.contact .card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards.contact .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.cards.contact .icon {
+    color: #009688;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #009688;
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.footer .footer-title span {
+    font-weight: 600;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    margin: 0 8px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #B2DFDB;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .head {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+        background: rgba(0, 150, 136, 0.9);
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .main h1 {
+        font-size: 2.2rem;
+    }
+
+    .main h3 {
+        font-size: 1.2rem;
+    }
+
+    .cards#services .card,
+    .skills .card,
+    .project-card,
+    .cards.contact .card {
+        width: 90%;
+    }
+}
